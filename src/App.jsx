@@ -31,13 +31,15 @@ const slides = [
   },
   {
     id: 2,
-    title: "Smart Contracts",
+    title: "OK, but how?",
     keyPoints: [
       {
+        magicWord: "Immutable",
         text: "Code replaces trust: Once deployed, contracts cannot be modified",
         example: "Example: MakerDAO's code has controlled billions for years without changes"
       },
       {
+        magicWord: "Autonomous",
         text: "Eliminates middlemen and manual processes",
         example: "Example: Uniswap processes $1B+ daily with zero human intervention • DeFi liquidations trigger instantly when collateral drops below 150%"
       }
@@ -46,7 +48,7 @@ const slides = [
   },
   {
     id: 3,
-    title: "Composability",
+    title: "Mighty Composability",
     keyPoints: [
       {
         text: "Protocols are building blocks — like Legos",
@@ -65,7 +67,7 @@ const slides = [
   },
   {
     id: 4,
-    title: "Security and Decentralization",
+    title: "Decentralization Guarantees Security",
     keyPoints: [
       {
         text: "Thousands of nodes = no single point of failure",
@@ -121,7 +123,7 @@ const slides = [
         example: "Example: Polygon zkEVM proves transaction validity with zero-knowledge cryptography"
       },
       {
-        text: "Seamless bridging maintains ecosystem unity",
+        text: "Cross-chain interoperability",
         example: "Example: Move USDC from Ethereum to Optimism in under 2 minutes"
       }
     ],
@@ -167,22 +169,40 @@ const slides = [
   },
   {
     id: 10,
-    title: "Ethereum is the Future",
-    subtitle: "The Most Credible Platform",
-    content: "Ethereum is the most credible, decentralized, and programmable financial and app platform in the world.",
-    callToAction: "Explore, build, participate — it's open to you.",
+    title: "Happy 10th Birthday, Ethereum! 🎉",
+    subtitle: "A Decade of Decentralized Innovation",
+    content: "July 30, 2025 marks 10 incredible years since Ethereum went live. From a simple idea to the world's computer — Ethereum has enabled $500B+ in DeFi, millions of NFTs, thousands of DAOs, and countless innovations that didn't exist before. Here's to the next decade of building the decentralized future.",
+    callToAction: "The journey continues — be part of it.",
     type: "closing"
   },
   {
     id: 11,
     title: "Latest News",
-    subtitle: "Ethereum's Growing Momentum",
-    content: "Real-time developments showing Ethereum's continued adoption and innovation.",
     type: "section"
   },
   {
     id: 12,
     tweetId: "1925653898548649999",
+    type: "news"
+  },
+  {
+    id: 13,
+    tweetId: "1925223660111176101",
+    type: "news"
+  },
+  {
+    id: 14,
+    tweetId: "1925118054759022808",
+    type: "news"
+  },
+  {
+    id: 15,
+    tweetId: "1925657285965062547",
+    type: "news"
+  },
+  {
+    id: 16,
+    tweetId: "1925857790368637360",
     type: "news"
   }
 ]
@@ -267,11 +287,19 @@ const Slide = ({ slide, isActive }) => {
       <div className="slide-content">
         <div className="slide-icon">{slide.icon}</div>
         <h2 className="slide-title">{slide.title}</h2>
+        
         <div className="key-points">
           {slide.keyPoints.map((point, index) => (
-            <div key={index} className="key-point">
-              <span className="bullet">•</span>
+            <div key={index} className={`key-point ${point.magicWord ? 'has-magic-word' : ''}`}>
+              {!point.magicWord && <span className="bullet">•</span>}
               <div className="point-content">
+                {point.magicWord && (
+                  <div className="magic-word-inline">
+                    <div className={`magic-word magic-word-${index + 1}`}>
+                      {point.magicWord}
+                    </div>
+                  </div>
+                )}
                 <span className="point-text">{point.text}</span>
                 <span className="point-example">{point.example}</span>
               </div>
