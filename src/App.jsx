@@ -340,9 +340,14 @@ const Navigation = ({ currentSlide, totalSlides, onNext, onPrev, onSlideSelect }
       →
     </button>
     
-    <div className="nav-loading-icon">
+    <a 
+      href="https://github.com/guildxyz/slides" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="nav-loading-icon"
+    >
       <LoadingIcon />
-    </div>
+    </a>
   </div>
 )
 

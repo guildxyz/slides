@@ -670,7 +670,6 @@ body {
 }
 
 .slide.active .magic-word {
-  animation: gradient-wave 6s ease-in-out infinite;
 }
 
 .magic-word-inline {
@@ -690,7 +689,6 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
-  animation: gradient-wave 6s ease-in-out infinite;
   filter: drop-shadow(0 0 15px rgba(78, 205, 196, 0.2));
   margin-bottom: 0.5rem;
 }
@@ -711,7 +709,6 @@ body {
 }
 
 .slide.active .magic-word-inline .magic-word {
-  animation: gradient-wave 6s ease-in-out infinite;
 }
 
 .nav-loading-icon {

@@ -1,13 +1,36 @@
-# React + Vite
+# Ethereum Slides
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive slideshow presentation about Ethereum's core principles, technology, and 10th anniversary celebration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎯 Interactive slides covering Ethereum fundamentals
+- ⚡ Smooth animations with shader background effects
+- 📱 Responsive design with keyboard navigation
+- 🐦 Embedded Twitter feeds for latest news
+- 🎨 Modern UI with visual effects
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# slides
+```bash
+npm install
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the slideshow.
+
+## Navigation
+
+- **Arrow keys**: Navigate between slides
+- **Click indicators**: Jump to specific slides
+- **Loading icon**: Links to project repository
+
+## Tech Stack
+
+- React + Vite
+- WebGL shaders for background effects
+- Twitter embeds for real-time news
+
+## About
+
+Celebrating Ethereum's 10th anniversary (2015-2025) with an overview of what makes it powerful: decentralization, composability, and permissionless innovation.
