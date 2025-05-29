@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import ShaderBackground from './ShaderBackground'
+import LoadingIcon from './LoadingIcon'
 import './App.css'
 
 const slides = [
@@ -338,6 +339,10 @@ const Navigation = ({ currentSlide, totalSlides, onNext, onPrev, onSlideSelect }
     >
       →
     </button>
+    
+    <div className="nav-loading-icon">
+      <LoadingIcon />
+    </div>
   </div>
 )
 
